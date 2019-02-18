@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Новая валюта
+        Нова валюта
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
         <li><a href="<?=ADMIN;?>/currency">Список валют</a></li>
-        <li class="active">Новая валюта</li>
+        <li class="active">Нова валюта</li>
     </ol>
 </section>
 
@@ -18,13 +18,13 @@
                 <form action="<?=ADMIN;?>/currency/add" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
-                            <label for="title">Наименование валюты</label>
-                            <input type="text" name="title" class="form-control" id="title" placeholder="Наименование валюты" required>
+                            <label for="title">Навзва валюти</label>
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Навзва валюти" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div class="form-group has-feedback">
-                            <label for="code">Код валюты</label>
-                            <input type="text" name="code" class="form-control" id="code" placeholder="Код валюты" required>
+                            <label for="code">Код валюти</label>
+                            <input type="text" name="code" class="form-control" id="code" placeholder="Код валюти" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div class="form-group">
@@ -36,19 +36,19 @@
                             <input type="text" name="symbol_right" class="form-control" id="symbol_right" placeholder="Символ справа">
                         </div>
                         <div class="form-group has-feedback">
-                            <label for="value">Значение</label>
-                            <input type="text" name="value" class="form-control" id="value" placeholder="Значение" required data-error="Допускаются цифры и десятичная точка" pattern="^[0-9.]{1,}$">
+                            <label for="value">Значення</label>
+                            <input type="text" name="value" class="form-control" id="value" placeholder="Значення" required data-error="Допускаются цифры и десятичная точка" pattern="^[0-9.]{1,}$">
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group has-feedback">
                             <label for="value">
                                 <input type="checkbox" name="base">
-                                Базовая валюта</label>
+                                Базова валюта</label>
                         </div>
                     </div>
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-success">Добавить</button>
+                        <button type="submit" class="btn btn-success">Додати</button>
                     </div>
                 </form>
             </div>

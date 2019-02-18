@@ -42,7 +42,7 @@ define(function () {
       return 'Загрузка данных…';
     },
     maximumSelected: function (args) {
-      var message = 'Вы можете выбрать не более ' + args.maximum + ' элемент';
+      var message = 'Вы можете Вибрать не более ' + args.maximum + ' элемент';
 
       message += ending(args.maximum, '', 'a', 'ов');
 

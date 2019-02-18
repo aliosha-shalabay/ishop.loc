@@ -1,11 +1,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Список заказов
+        Список закзів
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li class="active">Список заказов</li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li class="active">Список закзів</li>
     </ol>
 </section>
 
@@ -20,12 +20,12 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Покупатель</th>
+                                    <th>Покупець</th>
                                     <th>Статус</th>
                                     <th>Сумма</th>
-                                    <th>Дата создания</th>
-                                    <th>Дата изменения</th>
-                                    <th>Действия</th>
+                                    <th>Дата створення</th>
+                                    <th>Дата змін</th>
+                                    <th>Дія</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,7 +34,7 @@
                                 <tr class="<?=$class;?>">
                                     <td><?=$order['id'];?></td>
                                     <td><?=$order['name'];?></td>
-                                    <td><?=$order['status'] ? 'Завершен' : 'Новый';?></td>
+                                    <td><?=$order['status'] ? 'Завершен' : 'Новий';?></td>
                                     <td><?=$order['sum'];?> <?=$order['currency'];?></td>
                                     <td><?=$order['date'];?></td>
                                     <td><?=$order['update_at'];?></td>
@@ -45,7 +45,7 @@
                         </table>
                     </div>
                     <div class="text-center">
-                        <p>(<?=count($orders);?> заказа(ов) из <?=$count;?>)</p>
+                        <p>(<?=count($orders);?> заказ(ів) из <?=$count;?>)</p>
                         <?php if($pagination->countPages > 1): ?>
                             <?=$pagination;?>
                         <?php endif; ?>

@@ -3,15 +3,15 @@
     <h1>
         Заказ №<?=$order['id'];?>
         <?php if(!$order['status']): ?>
-            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=1" class="btn btn-success btn-xs">Одобрить</a>
+            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=1" class="btn btn-success btn-xs">Одобрити</a>
         <?php else: ?>
-            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=0" class="btn btn-default btn-xs">Вернуть на доработку</a>
+            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=0" class="btn btn-default btn-xs">Повернуть на доробку</a>
         <?php endif; ?>
-        <a href="<?=ADMIN;?>/order/delete?id=<?=$order['id'];?>" class="btn btn-danger btn-xs delete">Удалить</a>
+        <a href="<?=ADMIN;?>/order/delete?id=<?=$order['id'];?>" class="btn btn-danger btn-xs delete">Видалити</a>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/order">Список заказов</a></li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li><a href="<?=ADMIN;?>/order">Список закзів</a></li>
         <li class="active">Заказ №<?=$order['id'];?></li>
     </ol>
 </section>
@@ -34,11 +34,11 @@
                                     <td><?=$order['date'];?></td>
                                 </tr>
                                 <tr>
-                                    <td>Дата изменения</td>
+                                    <td>Дата змін</td>
                                     <td><?=$order['update_at'];?></td>
                                 </tr>
                                 <tr>
-                                    <td>Кол-во позиций в заказе</td>
+                                    <td>Кількість позицій в заказі</td>
                                     <td><?=count($order_products);?></td>
                                 </tr>
                                 <tr>
@@ -46,15 +46,15 @@
                                     <td><?=$order['sum'];?> <?=$order['currency'];?></td>
                                 </tr>
                                 <tr>
-                                    <td>Имя заказчика</td>
+                                    <td>Імя заказчика</td>
                                     <td><?=$order['name'];?></td>
                                 </tr>
                                 <tr>
                                     <td>Статус</td>
-                                    <td><?=$order['status'] ? 'Завершен' : 'Новый';?></td>
+                                    <td><?=$order['status'] ? 'Завершен' : 'Новий';?></td>
                                 </tr>
                                 <tr>
-                                    <td>Комментарий</td>
+                                    <td>Коментарій</td>
                                     <td><?=$order['note'];?></td>
                                 </tr>
                             </tbody>
@@ -71,9 +71,9 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Наименование</th>
-                                <th>Кол-во</th>
-                                <th>Цена</th>
+                                <th>Навзва</th>
+                                <th>Кількість</th>
+                                <th>Ціна </th>
                             </tr>
                             </thead>
                             <tbody>

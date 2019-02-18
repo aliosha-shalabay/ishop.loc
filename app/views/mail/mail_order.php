@@ -12,9 +12,9 @@
 <table style="border: 1px solid #ddd; border-collapse: collapse; width: 100%;">
     <thead>
     <tr style="background: #f9f9f9;">
-        <th style="padding: 8px; border: 1px solid #ddd;">Наименование</th>
-        <th style="padding: 8px; border: 1px solid #ddd;">Кол-во</th>
-        <th style="padding: 8px; border: 1px solid #ddd;">Цена</th>
+        <th style="padding: 8px; border: 1px solid #ddd;">Навзва</th>
+        <th style="padding: 8px; border: 1px solid #ddd;">Кількість</th>
+        <th style="padding: 8px; border: 1px solid #ddd;">Ціна </th>
         <th style="padding: 8px; border: 1px solid #ddd;">Сумма</th>
     </tr>
     </thead>

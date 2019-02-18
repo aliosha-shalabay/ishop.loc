@@ -1,6 +1,6 @@
 ![ion.rangeSlider](_tmp/logo-ion-range-slider.png)
 
-> English description | <a href="readme.ru.md">Описание на русском</a>
+> English description | <a href="readme.ru.md">Описання  на русском</a>
 
 Ion.RangeSlider. Is an easy, flexible and responsive range slider with tons of options.
 

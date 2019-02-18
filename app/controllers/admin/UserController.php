@@ -14,12 +14,12 @@ class UserController extends AppController {
         $pagination = new Pagination($page, $perpage, $count);
         $start = $pagination->getStart();
         $users = \R::findAll('user', "LIMIT $start, $perpage");
-        $this->setMeta('Список пользователей');
+        $this->setMeta('Список користувачів');
         $this->set(compact('users', 'pagination', 'count'));
     }
 
     public function addAction(){
-        $this->setMeta('Новый пользователь');
+        $this->setMeta('Новий користувач');
     }
 
     public function editAction(){
@@ -38,7 +38,7 @@ class UserController extends AppController {
                 redirect();
             }
             if($user->update('user', $id)){
-                $_SESSION['success'] = 'Изменения сохранены';
+                $_SESSION['success'] = 'змін сохранены';
             }
             redirect();
         }
@@ -50,7 +50,7 @@ class UserController extends AppController {
   JOIN `order_product` ON `order`.`id` = `order_product`.`order_id`
   WHERE user_id = {$user_id} GROUP BY `order`.`id` ORDER BY `order`.`status`, `order`.`id`");
 
-        $this->setMeta('Редактирование профиля пользователя');
+        $this->setMeta('Редагування профиля пользователя');
         $this->set(compact('user', 'orders'));
     }
 
@@ -58,7 +58,7 @@ class UserController extends AppController {
         if(!empty($_POST)){
             $user = new User();
             if(!$user->login(true)){
-                $_SESSION['error'] = 'Логин/пароль введены неверно';
+                $_SESSION['error'] = 'Логін/пароль введены неверно';
             }
             if(User::isAdmin()){
                 redirect(ADMIN);

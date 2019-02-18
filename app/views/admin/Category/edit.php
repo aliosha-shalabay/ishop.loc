@@ -1,11 +1,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Редактирование категории <?=$category->title;?>
+        Редагування категорії <?=$category->title;?>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/category">Список категорий</a></li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li><a href="<?=ADMIN;?>/category">Список категорійй</a></li>
         <li class="active"><?=$category->title;?></li>
     </ol>
 </section>
@@ -18,12 +18,12 @@
                 <form action="<?=ADMIN;?>/category/edit" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
-                            <label for="title">Наименование категории</label>
-                            <input type="text" name="title" class="form-control" id="title" placeholder="Наименование категории" value="<?=h($category->title);?>" required>
+                            <label for="title">Назва категорії</label>
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Назва категорії" value="<?=h($category->title);?>" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div class="form-group">
-                            <label for="parent_id">Родительская категория</label>
+                            <label for="parent_id">Батьківська категорія</label>
                             <?php new \app\widgets\menu\Menu([
                                 'tpl' => WWW . '/menu/select.php',
                                 'container' => 'select',
@@ -34,21 +34,21 @@
                                     'name' => 'parent_id',
                                     'id' => 'parent_id',
                                 ],
-                                'prepend' => '<option value="0">Самостоятельная категория</option>',
+                                'prepend' => '<option value="0">Самостійна категорія</option>',
                             ]) ?>
                         </div>
                         <div class="form-group">
-                            <label for="keywords">Ключевые слова</label>
-                            <input type="text" name="keywords" class="form-control" id="keywords" placeholder="Ключевые слова" value="<?=h($category->keywords);?>">
+                            <label for="keywords">Ключові слова</label>
+                            <input type="text" name="keywords" class="form-control" id="keywords" placeholder="Ключові  слова" value="<?=h($category->keywords);?>">
                         </div>
                         <div class="form-group">
-                            <label for="description">Описание</label>
-                            <input type="text" name="description" class="form-control" id="description" placeholder="Описание" value="<?=h($category->description);?>">
+                            <label for="description">Описання</label>
+                            <input type="text" name="description" class="form-control" id="description" placeholder="Описання " value="<?=h($category->description);?>">
                         </div>
                     </div>
                     <div class="box-footer">
                         <input type="hidden" name="id" value="<?=$category->id;?>">
-                        <button type="submit" class="btn btn-success">Сохранить</button>
+                        <button type="submit" class="btn btn-success">Зберегти</button>
                     </div>
                 </form>
             </div>

@@ -4,7 +4,7 @@
         Список валют
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
         <li class="active">Список валют</li>
     </ol>
 </section>
@@ -20,10 +20,10 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Наименование</th>
+                                <th>Навзва</th>
                                 <th>Код</th>
-                                <th>Значение</th>
-                                <th>Действия</th>
+                                <th>Значення</th>
+                                <th>Дія</th>
                             </tr>
                             </thead>
                             <tbody>

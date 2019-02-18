@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Редактирование фильтра <?=h($attr->value);?>
+        Редагування фильтра <?=h($attr->value);?>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/filter/attribute">Список фильтров</a></li>
-        <li class="active">Редактирование</li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li><a href="<?=ADMIN;?>/filter/attribute">Список фільтрів</a></li>
+        <li class="active">Редагування</li>
     </ol>
 </section>
 
@@ -18,8 +18,8 @@
                 <form action="<?=ADMIN;?>/filter/attribute-edit" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
-                            <label for="value">Наименование</label>
-                            <input type="text" name="value" class="form-control" id="value" placeholder="Наименование" required value="<?=h($attr->value);?>">
+                            <label for="value">Навзва</label>
+                            <input type="text" name="value" class="form-control" id="value" placeholder="Навзва" required value="<?=h($attr->value);?>">
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
                         <div class="form-group">
@@ -33,7 +33,7 @@
                     </div>
                     <div class="box-footer">
                         <input type="hidden" name="id" value="<?=$attr->id;?>">
-                        <button type="submit" class="btn btn-success">Сохранить</button>
+                        <button type="submit" class="btn btn-success">Зберегти</button>
                     </div>
                 </form>
             </div>

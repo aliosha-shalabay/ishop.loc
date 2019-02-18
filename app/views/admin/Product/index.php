@@ -1,11 +1,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Список товаров
+        Список товарів
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li class="active">Список товаров</li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li class="active">Список товарів</li>
     </ol>
 </section>
 
@@ -20,11 +20,11 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Категория</th>
-                                <th>Наименование</th>
-                                <th>Цена</th>
+                                <th>Категорія</th>
+                                <th>Навзва</th>
+                                <th>Ціна </th>
                                 <th>Статус</th>
-                                <th>Действия</th>
+                                <th>Дія</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -42,7 +42,7 @@
                         </table>
                     </div>
                     <div class="text-center">
-                        <p>(<?=count($products);?> товаров из <?=$count;?>)</p>
+                        <p>(<?=count($products);?> товарів из <?=$count;?>)</p>
                         <?php if($pagination->countPages > 1): ?>
                             <?=$pagination;?>
                         <?php endif; ?>

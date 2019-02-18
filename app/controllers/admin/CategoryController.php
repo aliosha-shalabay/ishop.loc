@@ -21,7 +21,7 @@ class CategoryController extends AppController {
         }
         $products = \R::count('product', 'category_id = ?', [$id]);
         if($products){
-            $errors .= '<li>Удаление невозможно, в категории есть товары</li>';
+            $errors .= '<li>Удаление невозможно, в категории есть товари</li>';
         }
         if($errors){
             $_SESSION['error'] = "<ul>$errors</ul>";
@@ -29,7 +29,7 @@ class CategoryController extends AppController {
         }
         $category = \R::load('category', $id);
         \R::trash($category);
-        $_SESSION['success'] = 'Категория удалена';
+        $_SESSION['success'] = 'Категорія удалена';
         redirect();
     }
 
@@ -47,11 +47,11 @@ class CategoryController extends AppController {
                 $cat = \R::load('category', $id);
                 $cat->alias = $alias;
                 \R::store($cat);
-                $_SESSION['success'] = 'Категория добавлена';
+                $_SESSION['success'] = 'Категорія добавлена';
             }
             redirect();
         }
-        $this->setMeta('Новая категория');
+        $this->setMeta('Новая Категорія');
     }
 
     public function editAction(){
@@ -69,14 +69,14 @@ class CategoryController extends AppController {
                 $category = \R::load('category', $id);
                 $category->alias = $alias;
                 \R::store($category);
-                $_SESSION['success'] = 'Изменения сохранены';
+                $_SESSION['success'] = 'змін сохранены';
             }
             redirect();
         }
         $id = $this->getRequestID();
         $category = \R::load('category', $id);
         App::$app->setProperty('parent_id', $category->parent_id);
-        $this->setMeta("Редактирование категории {$category->title}");
+        $this->setMeta("Редагування категории {$category->title}");
         $this->set(compact('category'));
     }
 

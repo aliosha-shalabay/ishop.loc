@@ -1,11 +1,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Группы фильтров
+        Групи фільтрів
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li class="active">Группы фильтров</li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li class="active">Групи фільтрів</li>
     </ol>
 </section>
 
@@ -16,12 +16,12 @@
             <div class="box">
                 <div class="box-body">
                     <div class="table-responsive">
-                        <a href="<?=ADMIN;?>/filter/group-add" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i> Добавить группу</a>
+                        <a href="<?=ADMIN;?>/filter/group-add" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i> Додати группу</a>
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>Наименование</th>
-                                <th>Действие</th>
+                                <th>Навзва</th>
+                                <th>Дія</th>
                             </tr>
                             </thead>
                             <tbody>

@@ -1,10 +1,10 @@
 $('.delete').click(function(){
-    var res = confirm('Подтвердите действие');
+    var res = confirm('Подтвердите Дія');
     if(!res) return false;
 });
 
 $('.del-item').on('click', function(){
-    var res = confirm('Подтвердите действие');
+    var res = confirm('Подтвердите Дія');
     if(!res) return false;
     var $this = $(this),
         id = $this.data('id'),
@@ -51,7 +51,7 @@ $('#reset-filter').click(function(){
 });
 
 $(".select2").select2({
-    placeholder: "Начните вводить наименование товара",
+    placeholder: "Начните вводить Навзва товара",
     //minimumInputLength: 2,
     cache: true,
     ajax: {
@@ -128,7 +128,7 @@ if(buttonMulti){
 
 $('#add').on('submit', function(){
      if(!isNumeric( $('#category_id').val() )){
-         alert('Выберите категорию');
+         alert('Виберіть категорію');
          return false;
      }
 });

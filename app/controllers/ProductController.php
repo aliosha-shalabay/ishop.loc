@@ -17,14 +17,14 @@ class ProductController extends AppController {
         // хлебные крошки
         $breadcrumbs = Breadcrumbs::getBreadcrumbs($product->category_id, $product->title);
 
-        // связанные товары
+        // Звязані товари
         $related = \R::getAll("SELECT * FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$product->id]);
 
         // запись в куки запрошенного товара
         $p_model = new Product();
         $p_model->setRecentlyViewed($product->id);
 
-        // просмотренные товары
+        // просмотренные товари
         $r_viewed = $p_model->getRecentlyViewed();
         $recentlyViewed = null;
         if($r_viewed){

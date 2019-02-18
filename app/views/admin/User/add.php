@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Новый пользователь
+        Новий користувач
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?= ADMIN ?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?= ADMIN ?>/user"> Список пользователей</a></li>
-        <li class="active">Новый пользователь</li>
+        <li><a href="<?= ADMIN ?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li><a href="<?= ADMIN ?>/user"> Список користувачів</a></li>
+        <li class="active">Новий користувач</li>
     </ol>
 </section>
 
@@ -18,7 +18,7 @@
                 <form method="post" action="/user/signup" role="form" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
-                            <label for="login">Логин</label>
+                            <label for="login">Логін</label>
                             <input class="form-control" name="login" id="login" type="text" value="<?= isset($_SESSION['form_data']['login']) ? $_SESSION['form_data']['login'] : '' ?>" required>
                         </div>
                         <div class="form-group has-feedback">
@@ -31,7 +31,7 @@
                             <input class="form-control" name="email" id="email" type="email" value="<?= isset($_SESSION['form_data']['email']) ? $_SESSION['form_data']['email'] : '' ?>" required>
                         </div>
                         <div class="form-group has-feedback">
-                            <label for="name">Имя</label>
+                            <label for="name">Імя</label>
                             <input class="form-control" name="name" id="name" type="text" value="<?= isset($_SESSION['form_data']['name']) ? $_SESSION['form_data']['name'] : '' ?>" required>
                         </div>
                         <div class="form-group has-feedback">
@@ -41,15 +41,15 @@
                         <div class="form-group">
                             <label>Роль</label>
                             <select class="form-control" name="role">
-                                <option value="user">Пользователь</option>
-                                <option value="admin">Администратор</option>
+                                <option value="user">користувач</option>
+                                <option value="admin">Адміністратор</option>
                             </select>
                         </div>
                     </div>
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">Добавить</button>
+                        <button type="submit" class="btn btn-primary">Додати</button>
                     </div>
                 </form>
                 <?php if(isset($_SESSION['form_data'])) unset($_SESSION['form_data']); ?>

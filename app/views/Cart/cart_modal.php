@@ -4,9 +4,9 @@
             <thead>
             <tr>
                 <th>Фото</th>
-                <th>Наименование</th>
-                <th>Кол-во</th>
-                <th>Цена</th>
+                <th>Навзва</th>
+                <th>Кількість</th>
+                <th>Ціна </th>
                 <th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
             </tr>
             </thead>

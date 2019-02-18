@@ -17,7 +17,7 @@ class UserController extends AppController {
             }else{
                 $user->attributes['password'] = password_hash($user->attributes['password'], PASSWORD_DEFAULT);
                 if($user->save('user')){
-                    $_SESSION['success'] = 'Пользователь зарегистрирован';
+                    $_SESSION['success'] = 'користувач зарегистрирован';
                 }else{
                     $_SESSION['error'] = 'Ошибка!';
                 }
@@ -33,7 +33,7 @@ class UserController extends AppController {
             if($user->login()){
                 $_SESSION['success'] = 'Вы успешно авторизованы';
             }else{
-                $_SESSION['error'] = 'Логин/пароль введены неверно';
+                $_SESSION['error'] = 'Логін/пароль введены неверно';
             }
             redirect();
         }

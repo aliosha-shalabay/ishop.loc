@@ -3,7 +3,7 @@
     <div class="container">
         <div class="breadcrumbs-main">
             <ol class="breadcrumb">
-                <li><a href="<?= PATH ?>">Главная</a></li>
+                <li><a href="<?= PATH ?>">Головна</a></li>
                 <li>Регистрация</li>
             </ol>
         </div>
@@ -35,8 +35,8 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <label for="name">Имя</label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Имя" value="<?=isset($_SESSION['form_data']['name']) ? h($_SESSION['form_data']['name']) : '';?>" required>
+                                    <label for="name">Імя</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Імя" value="<?=isset($_SESSION['form_data']['name']) ? h($_SESSION['form_data']['name']) : '';?>" required>
                                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                                 </div>
                                 <div class="form-group has-feedback">

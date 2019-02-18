@@ -16,7 +16,7 @@ class ProductController extends AppController {
         $pagination = new Pagination($page, $perpage, $count);
         $start = $pagination->getStart();
         $products = \R::getAll("SELECT product.*, category.title AS cat FROM product JOIN category ON category.id = product.category_id ORDER BY product.title LIMIT $start, $perpage");
-        $this->setMeta('Список товаров');
+        $this->setMeta('Список товарів');
         $this->set(compact('products', 'pagination', 'count'));
     }
 
@@ -56,7 +56,7 @@ class ProductController extends AppController {
                 $product = \R::load('product', $id);
                 $product->alias = $alias;
                 \R::store($product);
-                $_SESSION['success'] = 'Изменения сохранены';
+                $_SESSION['success'] = 'змін сохранены';
                 redirect();
             }
         }
@@ -67,7 +67,7 @@ class ProductController extends AppController {
         $filter = \R::getCol('SELECT attr_id FROM attribute_product WHERE product_id = ?', [$id]);
         $related_product = \R::getAll("SELECT related_product.related_id, product.title FROM related_product JOIN product ON product.id = related_product.related_id WHERE related_product.product_id = ?", [$id]);
         $gallery = \R::getCol('SELECT img FROM gallery WHERE product_id = ?', [$id]);
-        $this->setMeta("Редактирование товара {$product->title}");
+        $this->setMeta("Редагування товара {$product->title}");
         $this->set(compact('product', 'filter', 'related_product', 'gallery'));
     }
 
@@ -99,7 +99,7 @@ class ProductController extends AppController {
             redirect();
         }
 
-        $this->setMeta('Новый товар');
+        $this->setMeta('Новий товар');
     }
 
     public function relatedProductAction(){

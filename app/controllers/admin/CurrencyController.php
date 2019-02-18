@@ -8,7 +8,7 @@ class CurrencyController extends AppController{
 
     public function indexAction(){
         $currencies = \R::findAll('currency');
-        $this->setMeta('Валюты магазина');
+        $this->setMeta('валюти магазина');
         $this->set(compact('currencies'));
     }
 
@@ -16,7 +16,7 @@ class CurrencyController extends AppController{
         $id = $this->getRequestID();
         $currency = \R::load('currency', $id);
         \R::trash($currency);
-        $_SESSION['success'] = "Изменения сохранены";
+        $_SESSION['success'] = "змін сохранены";
         redirect();
     }
 
@@ -32,14 +32,14 @@ class CurrencyController extends AppController{
                 redirect();
             }
             if($currency->update('currency', $id)){
-                $_SESSION['success'] = "Изменения сохранены";
+                $_SESSION['success'] = "змін сохранены";
                 redirect();
             }
         }
 
         $id = $this->getRequestID();
         $currency = \R::load('currency', $id);
-        $this->setMeta("Редактирование валюты {$currency->title}");
+        $this->setMeta("Редагування валюти {$currency->title}");
         $this->set(compact('currency'));
     }
 
@@ -58,7 +58,7 @@ class CurrencyController extends AppController{
                 redirect();
             }
         }
-        $this->setMeta('Новая валюта');
+        $this->setMeta('Нова валюта');
     }
 
 }

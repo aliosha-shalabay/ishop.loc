@@ -38,14 +38,14 @@ class FilterController extends AppController{
                 redirect();
             }
             if($attr->update('attribute_value', $id)){
-                $_SESSION['success'] = 'Изменения сохранены';
+                $_SESSION['success'] = 'змін сохранены';
                 redirect();
             }
         }
         $id = $this->getRequestID();
         $attr = \R::load('attribute_value', $id);
         $attrs_group = \R::findAll('attribute_group');
-        $this->setMeta('Редактирование атрибута');
+        $this->setMeta('Редагування атрибута');
         $this->set(compact('attr', 'attrs_group'));
     }
 
@@ -64,7 +64,7 @@ class FilterController extends AppController{
             }
         }
         $group = \R::findAll('attribute_group');
-        $this->setMeta('Новый фильтр');
+        $this->setMeta('Новий фильтр');
         $this->set(compact('group'));
     }
 
@@ -79,13 +79,13 @@ class FilterController extends AppController{
                 redirect();
             }
             if($group->update('attribute_group', $id)){
-                $_SESSION['success'] = 'Изменения сохранены';
+                $_SESSION['success'] = 'змін сохранены';
                 redirect();
             }
         }
         $id = $this->getRequestID();
         $group = \R::load('attribute_group', $id);
-        $this->setMeta("Редактирование группы {$group->title}");
+        $this->setMeta("Редагування Групи {$group->title}");
         $this->set(compact('group'));
     }
 
@@ -103,18 +103,18 @@ class FilterController extends AppController{
                 redirect();
             }
         }
-        $this->setMeta('Новая группа фильтров');
+        $this->setMeta('Новая группа фільтрів');
     }
 
     public function attributeGroupAction(){
         $attrs_group = \R::findAll('attribute_group');
-        $this->setMeta('Группы фильтров');
+        $this->setMeta('Групи фільтрів');
         $this->set(compact('attrs_group'));
     }
 
     public function attributeAction(){
         $attrs = \R::getAssoc("SELECT attribute_value.*, attribute_group.title FROM attribute_value JOIN attribute_group ON attribute_group.id = attribute_value.attr_group_id");
-        $this->setMeta('Фильтры');
+        $this->setMeta('Фільтри');
         $this->set(compact('attrs'));
     }
 

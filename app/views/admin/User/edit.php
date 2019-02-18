@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Редактирование пользователя
+        Редагування пользователя
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li><a href="<?=ADMIN;?>/user"> Список пользователей</a></li>
-        <li class="active">Редактирование пользователя</li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li><a href="<?=ADMIN;?>/user"> Список користувачів</a></li>
+        <li class="active">Редагування пользователя</li>
     </ol>
 </section>
 
@@ -18,7 +18,7 @@
                 <form action="<?=ADMIN;?>/user/edit" method="post" data-toggle="validator">
                     <div class="box-body">
                         <div class="form-group has-feedback">
-                            <label for="login">Логин</label>
+                            <label for="login">Логін</label>
                             <input type="text" class="form-control" name="login" id="login" value="<?=h($user->login);?>" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -27,7 +27,7 @@
                             <input type="password" class="form-control" name="password" id="password" placeholder="Введите пароль, если хотите его изменить">
                         </div>
                         <div class="form-group has-feedback">
-                            <label for="name">Имя</label>
+                            <label for="name">Імя</label>
                             <input type="text" class="form-control" name="name" id="name" value="<?=h($user->name);?>" required>
                             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -44,14 +44,14 @@
                         <div class="form-group">
                             <label>Роль</label>
                             <select name="role" id="role" class="form-control">
-                                <option value="user"<?php if($user->role == 'user') echo ' selected'; ?>>Пользователь</option>
-                                <option value="admin"<?php if($user->role == 'admin') echo ' selected'; ?>>Администратор</option>
+                                <option value="user"<?php if($user->role == 'user') echo ' selected'; ?>>користувач</option>
+                                <option value="admin"<?php if($user->role == 'admin') echo ' selected'; ?>>Адміністратор</option>
                             </select>
                         </div>
                     </div>
                     <div class="box-footer">
                         <input type="hidden" name="id" value="<?=$user->id;?>">
-                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                        <button type="submit" class="btn btn-primary">Зберегти</button>
                     </div>
                 </form>
             </div>
@@ -67,9 +67,9 @@
                                     <th>ID</th>
                                     <th>Статус</th>
                                     <th>Сумма</th>
-                                    <th>Дата создания</th>
-                                    <th>Дата изменения</th>
-                                    <th>Действия</th>
+                                    <th>Дата створення</th>
+                                    <th>Дата змін</th>
+                                    <th>Дія</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -77,7 +77,7 @@
                                     <?php $class = $order['status'] ? 'success' : ''; ?>
                                     <tr class="<?=$class;?>">
                                         <td><?=$order['id'];?></td>
-                                        <td><?=$order['status'] ? 'Завершен' : 'Новый';?></td>
+                                        <td><?=$order['status'] ? 'Завершен' : 'Новий';?></td>
                                         <td><?=$order['sum'];?> <?=$order['currency'];?></td>
                                         <td><?=$order['date'];?></td>
                                         <td><?=$order['update_at'];?></td>

@@ -30,7 +30,7 @@ class User extends \app\models\User {
         $user = \R::findOne('user', '(login = ? OR email = ?) AND id <> ?', [$this->attributes['login'], $this->attributes['email'], $this->attributes['id']]);
         if($user){
             if($user->login == $this->attributes['login']){
-                $this->errors['unique'][] = 'Этот логин уже занят';
+                $this->errors['unique'][] = 'Этот Логін уже занят';
             }
             if($user->email == $this->attributes['email']){
                 $this->errors['unique'][] = 'Этот email уже занят';

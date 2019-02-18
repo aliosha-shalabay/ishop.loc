@@ -17,7 +17,7 @@ $lang = array(
 
     "You don't have permissions to upload files." => "У вас нема прав для завантаження файлів.",
     "You don't have permissions to browse server." => "У вас нема прав для перегляду вмісту на сервері.",
-    "Cannot move uploaded file to target folder." => "Неможливо перемістити завантажений файл в папку призначення.",
+    "Cannot move uploaded file to target folder." => "Неможливо перемістити завантажений файл в папку приЗначення.",
     "Unknown error." => "Невідома помилка.",
     "The uploaded file exceeds {size} bytes." => "Завантажений файл перевищує розмір {size} байтів.",
     "The uploaded file was only partially uploaded." => "Завантажений файл було завантажено лише частково.",
@@ -74,7 +74,7 @@ $lang = array(
     "Are you sure you want to delete all files in the Clipboard?" => "Ви впевнені що хочете вилучити всі файли в буфері обміну?",
     "Copy {count} files" => "Копіювати {count} файл(ів)",
     "Move {count} files" => "Перемістити {count} файл(ів)",
-    "Add to Clipboard" => "Додати в буфер обміну",
+    "Add to Clipboard" => "Значення в буфер обміну",
     "Inexistant or inaccessible folder." => "Неіснуюча або недоступна папка.",
     "New folder name:" => "Нова назва папки:",
     "New file name:" => "Нова назва файлу:",

@@ -320,18 +320,18 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="<?= ADMIN ?>/category">Список категорий</a></li>
-                        <li><a href="<?= ADMIN ?>/category/add">Добавить категорию</a></li>
+                        <li><a href="<?= ADMIN ?>/category/add">Додати категорію</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-cubes"></i> <span>Товары</span>
+                    <a href="#"><i class="fa fa-cubes"></i> <span>товари</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="<?= ADMIN ?>/product">Список товаров</a></li>
-                        <li><a href="<?= ADMIN ?>/product/add">Добавить товар</a></li>
+                        <li><a href="<?= ADMIN ?>/product">Список товарів</a></li>
+                        <li><a href="<?= ADMIN ?>/product/add">Додати товар</a></li>
                     </ul>
                 </li>
                 <li><a href="<?= ADMIN ?>/cache"><i class="fa fa-database"></i> <span>Кэширование</span></a></li>
@@ -342,30 +342,30 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="<?= ADMIN ?>/user">Список пользователей</a></li>
-                        <li><a href="<?= ADMIN ?>/user/add">Добавить пользователя</a></li>
+                        <li><a href="<?= ADMIN ?>/user">Список користувачів</a></li>
+                        <li><a href="<?= ADMIN ?>/user/add">Додати пользователя</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-usd"></i> <span>Валюты</span>
+                    <a href="#"><i class="fa fa-usd"></i> <span>валюти</span>
                         <span class="pull-right-container">
 <i class="fa fa-angle-left pull-right"></i>
 </span>
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="<?= ADMIN ?>/currency">Список валют</a></li>
-                        <li><a href="<?= ADMIN ?>/currency/add">Добавить валюту</a></li>
+                        <li><a href="<?= ADMIN ?>/currency/add">Додати валюту</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-filter"></i> <span>Фильтры</span>
+                    <a href="#"><i class="fa fa-filter"></i> <span>Фільтри</span>
                         <span class="pull-right-container">
 <i class="fa fa-angle-left pull-right"></i>
 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="<?= ADMIN ?>/filter/attribute-group">Группы фильтров</a></li>
-                        <li><a href="<?= ADMIN ?>/filter/attribute">Фильтры</a></li>
+                        <li><a href="<?= ADMIN ?>/filter/attribute-group">Групи фільтрів</a></li>
+                        <li><a href="<?= ADMIN ?>/filter/attribute">Фільтри</a></li>
                     </ul>
                 </li>
             </ul>

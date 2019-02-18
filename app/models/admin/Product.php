@@ -32,12 +32,12 @@ class Product extends AppModel {
 
     public function editRelatedProduct($id, $data){
         $related_product = \R::getCol('SELECT related_id FROM related_product WHERE product_id = ?', [$id]);
-        // если менеджер убрал связанные товары - удаляем их
+        // если менеджер убрал Звязані товари - удаляем их
         if(empty($data['related']) && !empty($related_product)){
             \R::exec("DELETE FROM related_product WHERE product_id = ?", [$id]);
             return;
         }
-        // если добавляются связанные товары
+        // если добавляются Звязані товари
         if(empty($related_product) && !empty($data['related'])){
             $sql_part = '';
             foreach($data['related'] as $v){
@@ -48,7 +48,7 @@ class Product extends AppModel {
             \R::exec("INSERT INTO related_product (product_id, related_id) VALUES $sql_part");
             return;
         }
-        // если изменились связанные товары - удалим и запишем новые
+        // если изменились Звязані товари - удалим и запишем новые
         if(!empty($data['related'])){
             $result = array_diff($related_product, $data['related']);
             if(!empty($result) || count($related_product) != count($data['related'])){
@@ -66,12 +66,12 @@ class Product extends AppModel {
 
     public function editFilter($id, $data){
         $filter = \R::getCol('SELECT attr_id FROM attribute_product WHERE product_id = ?', [$id]);
-        // если менеджер убрал фильтры - удаляем их
+        // если менеджер убрал Фільтри - удаляем их
         if(empty($data['attrs']) && !empty($filter)){
             \R::exec("DELETE FROM attribute_product WHERE product_id = ?", [$id]);
             return;
         }
-        // если фильтры добавляются
+        // если Фільтри добавляются
         if(empty($filter) && !empty($data['attrs'])){
             $sql_part = '';
             foreach($data['attrs'] as $v){
@@ -81,7 +81,7 @@ class Product extends AppModel {
             \R::exec("INSERT INTO attribute_product (attr_id, product_id) VALUES $sql_part");
             return;
         }
-        // если изменились фильтры - удалим и запишем новые
+        // если изменились Фільтри - удалим и запишем новые
         if(!empty($data['attrs'])){
             $result = array_diff($filter, $data['attrs']);
             if(!$result || count($filter) != count($data['attrs'])){
@@ -182,7 +182,7 @@ class Product extends AppModel {
             imagefill($newImg, 0, 0, $transPng); // заливка
         }
 
-        imagecopyresampled($newImg, $img, 0, 0, 0, 0, $wmax, $hmax, $w_orig, $h_orig); // копируем и ресайзим изображение
+        imagecopyresampled($newImg, $img, 0, 0, 0, 0, $wmax, $hmax, $w_orig, $h_orig); // копируем и ресайзим зображення
         switch($ext){
             case("gif"):
                 imagegif($newImg, $dest);

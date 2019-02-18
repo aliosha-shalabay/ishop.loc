@@ -69,7 +69,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--top-header-->
 <!--start-logo-->
 <div class="logo">
-    <a href="<?=PATH;?>"><h1>Rolex Shop</h1></a>
+    <a href="<?=PATH;?>"><h1>ІНТЕРНЕТ МАГАЗИН ЧАСІВ</h1></a>
 </div>
 <!--start-logo-->
 <!--bottom-header-->

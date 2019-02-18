@@ -1,11 +1,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Список пользователей
+        Список користувачів
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
-        <li class="active">Список пользователей</li>
+        <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Головна</a></li>
+        <li class="active">Список користувачів</li>
     </ol>
 </section>
 
@@ -20,11 +20,11 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Логин</th>
+                                <th>Логін</th>
                                 <th>Email</th>
-                                <th>Имя</th>
+                                <th>Імя</th>
                                 <th>Роль</th>
-                                <th>Действия</th>
+                                <th>Дія</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -41,7 +41,7 @@
                         </table>
                     </div>
                     <div class="text-center">
-                        <p>(<?=count($users);?> пользователей из <?=$count;?>)</p>
+                        <p>(<?=count($users);?> користувачів из <?=$count;?>)</p>
                         <?php if($pagination->countPages > 1): ?>
                             <?=$pagination;?>
                         <?php endif; ?>
